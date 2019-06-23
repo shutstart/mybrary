@@ -16,11 +16,24 @@
       <input name="price" ngModel type="text" class="form-control" placeholder="Enter Price" required><br>
     </div><br>
     <div class="form-group">
+      <label for="genre">Book Genre:</label><br>
+      <input name="genre" ngModel type="text" class="form-control" placeholder="Enter genre" required><br>
+    </div><br>
+    <div class="form-group">
+      <label for="lang">Language:</label><br>
+      <input name="lang" ngModel type="text" class="form-control" placeholder="" required><br>
+    </div><br>
+    <div class="form-group">
+      <label for="publisher">Publisher:</label><br>
+      <input name="publisher" ngModel type="text" class="form-control" placeholder="" required><br>
+    </div><br>
+    <!-- <!-- <div class="form-group"> -->
       <label for="price">Enter Book Image:</label><br>
       <input name="image" ngModel type="file" class="form-control" placeholder="Enter Image"
         accept="image/png, image/jpeg" required><br>
       <small id="emailHelp" class="form-text text-muted">Only png or jpeg images allowed</small>
-    </div><br>
+    </div> -->
+    <br>
     <button type = "submit" [disabled]="!addBookForm.valid">Submit</button>
   </form>
 </div>
