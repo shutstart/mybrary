@@ -1,3 +1,15 @@
-<p>
-  books works!
-</p>
+<div *ngIf="mode=='list'">
+    <div *ngFor="let book of books" style="margin-bottom: 10px;">
+        <div style="border: 1px solid black;">
+         <img src="" class="card-img-top" alt="Book Image">
+         <h5>{{book.bookName}}</h5>
+         <h6>By: {{book.author}}</h6>
+         <p style="color: green;">Rs. {{book.price}} /-</p>
+         <a (click)="ViewDetails(book)">View Details</a>
+        </div>
+       </div>
+</div>
+
+
+<button *ngIf="mode=='single'" (click)="mode='list'">Back</button>
+<app-singlebook [book]="selectedBook" *ngIf="mode=='single' && selectedBook"></app-singlebook>
