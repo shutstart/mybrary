@@ -28,6 +28,7 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
  
 import { ToastrModule } from 'ngx-toastr';
+import { FileSizePipe } from './file-size.pipe';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { ToastrModule } from 'ngx-toastr';
     ItemComponent,
     RentComponent,
     RentalsComponent,
-    AddbookComponent
+    AddbookComponent,
+    FileSizePipe
   ],
   imports: [
     BrowserModule,
