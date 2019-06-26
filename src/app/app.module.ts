@@ -29,7 +29,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
  
 import { ToastrModule } from 'ngx-toastr';
 import { FileSizePipe } from './file-size.pipe';
-import { DropzoneDirective } from './dropzone.directive';
+import { DropZoneDirective } from './dropzone.directive';
+import { FileUploadComponent } from './books/file-upload/file-upload.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { DropzoneDirective } from './dropzone.directive';
     RentalsComponent,
     AddbookComponent,
     FileSizePipe,
-    DropzoneDirective
+    DropZoneDirective,
+    FileUploadComponent
   ],
   imports: [
     BrowserModule,
