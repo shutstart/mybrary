@@ -4,16 +4,8 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-
-
-
-
-
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-
-
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
@@ -32,6 +24,11 @@ import { ItemComponent } from './cart/item/item.component';
 import { RentComponent } from './rent/rent.component';
 import { RentalsComponent } from './rent/rentals/rentals.component';
 import { AddbookComponent } from './books/addbook/addbook.component';
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+ 
+import { ToastrModule } from 'ngx-toastr';
+import { FileSizePipe } from './file-size.pipe';
 
 @NgModule({
   declarations: [
@@ -50,7 +47,8 @@ import { AddbookComponent } from './books/addbook/addbook.component';
     ItemComponent,
     RentComponent,
     RentalsComponent,
-    AddbookComponent
+    AddbookComponent,
+    FileSizePipe
   ],
   imports: [
     BrowserModule,
@@ -61,8 +59,14 @@ import { AddbookComponent } from './books/addbook/addbook.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
-    AngularFireStorageModule // imports firebase/storage only needed for storage features
-
+    AngularFireStorageModule, // imports firebase/storage only needed for storage features
+    CommonModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot({
+      timeOut: 5000,
+      positionClass: 'toast-top-right',
+      preventDuplicates: true
+    }) 
   ],
   providers: [],
   bootstrap: [AppComponent]

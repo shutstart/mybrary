@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+import { AngularFireStorage } from '@angular/fire/storage';
 
 @Component({
   selector: 'app-singlebook',
@@ -8,9 +10,10 @@ import { Component, OnInit, Input } from '@angular/core';
 export class SinglebookComponent implements OnInit {
 
   @Input('book') book
-  constructor() { }
-
+  constructor(public toastr:ToastrService,public storage:AngularFireStorage) { }
+image:any
   ngOnInit() {
+    this.image = this.storage.ref(this.book.image).getDownloadURL()
   }
 
 }
