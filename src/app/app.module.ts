@@ -29,6 +29,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
  
 import { ToastrModule } from 'ngx-toastr';
 import { FileSizePipe } from './file-size.pipe';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { FileSizePipe } from './file-size.pipe';
     RentComponent,
     RentalsComponent,
     AddbookComponent,
-    FileSizePipe
+    FileSizePipe,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
