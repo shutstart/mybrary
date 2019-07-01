@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
+import {config } from 'rxjs';
+
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
@@ -8,7 +10,9 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
               './css/bootstrap.min.css',
               './css/animate.css',
               './css/meanmenu.min.css',
-              './css/flexslider.css']
+              './css/flexslider.css'],
+
+  providers: [NgbCarouselConfig]
 })
 export class IndexComponent implements OnInit {
 

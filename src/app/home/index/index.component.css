@@ -35,7 +35,6 @@ a:focus {
 }
 img {
     max-width: 100%;
-    height: auto
 }
 .fix {
     overflow: hidden
@@ -294,11 +293,6 @@ body {
 /*----------------------------------------*/
 #slides_control > div{
     height: 400px;
-  }
-  slideimg{
-    margin:auto;
-    height: 100px;
-    width: 1200px;
   }
   #slides_control {
     position:absolute;
