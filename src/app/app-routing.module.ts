@@ -6,10 +6,11 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { BooksComponent } from './books/books.component';
 import { AddbookComponent } from './books/addbook/addbook.component'
 import { HomeComponent } from './home/home.component';
+import { IndexComponent } from './home/index/index.component';
 const routes: Routes = [
   {path: 'allbooks', component: BooksComponent},
   {path: 'addbook', component: AddbookComponent},
-  {path: 'home', component: HomeComponent},
+  {path: 'home', component: IndexComponent},
   { path: 'auth', component: AuthComponent,children:[
     { path: 'signin', component: SigninComponent },
     { path: 'signup', component: SignupComponent }

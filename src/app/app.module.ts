@@ -29,8 +29,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
  
 import { ToastrModule } from 'ngx-toastr';
 import { FileSizePipe } from './file-size.pipe';
+
+import { FooterComponent } from './footer/footer.component';
+
 import { DropZoneDirective } from './dropzone.directive';
 import { FileUploadComponent } from './books/file-upload/file-upload.component';
+
 
 @NgModule({
   declarations: [
@@ -51,8 +55,12 @@ import { FileUploadComponent } from './books/file-upload/file-upload.component';
     RentalsComponent,
     AddbookComponent,
     FileSizePipe,
+
+    FooterComponent,
+
     DropZoneDirective,
-    FileUploadComponent
+    FileUploadComponent,
+
   ],
   imports: [
     BrowserModule,

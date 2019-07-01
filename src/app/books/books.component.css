@@ -1,0 +1,10 @@
+.container{
+    width:500px;
+    background: rgb(109, 109, 201);
+    
+  }
+.btn{
+    align-items: center;
+    align-self: center;
+    
+}
