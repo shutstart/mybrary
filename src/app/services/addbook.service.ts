@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AddbookService {
-
+  url = ''
   constructor(private db:AngularFirestore) { }
 
   addBook(book){
